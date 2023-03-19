@@ -5,7 +5,20 @@ const express = require("express");
 const app = express();
 
 // middleware
-// /users 
+// 2
+// app.use((req, res, next) => {
+//   console.log("Calling first middleware");
+//   next();
+// });
+
+// app.use((req, res, next) => {
+//   console.log("Calling Second middleware");
+//   res.send("Response from second middleware");
+// });
+
+
+// 3
+// /users
 app.use("/users", (req, res, next) => {
   console.log("Calling /user route");
   res.send("Response from /users ");
